@@ -1,0 +1,22 @@
+.content img {
+    width: 1100px;
+    height: 150px;
+}
+
+
+.link {
+    text-decoration: none;
+}
+
+
+.descriptionBlock {
+    padding: 10px;
+}
+
+.mainPhoto {
+    max-width: 150px;
+}
+
+.contact {
+    padding-left: 10px;
+}
