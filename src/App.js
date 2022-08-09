@@ -4,7 +4,7 @@ import Navbar from './components/Navbar/Navbar';
 import News from './components/Navbar/News/News';
 import Music from './components/Navbar/Music/Music';
 import Settings from './components/Navbar/Settings/Settings';
-import {BrowserRouter, Route, Routes, useLocation, useNavigate, useParams, Navigate} from 'react-router-dom';
+import {HashRouter, Route, Routes, useLocation, useNavigate, useParams, Navigate} from 'react-router-dom';
 
 import UsersContainer from './components/Users/UsersContainer';
 import HeaderContainer from "./components/Header/HeaderContainer";
@@ -104,11 +104,11 @@ let AppContainer = compose(
 (App)
 
 const MainSocialApp = () => {
-    return <BrowserRouter>
+    return <HashRouter basename={process.env.PUBLIC_URL}>
         <Provider store={store}>
             <AppContainer/>
         </Provider>
-    </BrowserRouter>
+    </HashRouter>
 }
 
 export default MainSocialApp;
