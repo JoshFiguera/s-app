@@ -56,6 +56,7 @@ class App extends React.Component {
                         <Route path='/profile' element={<ProfileContainer/>}/>
                         <Route path='/messages' element={<DialogsContainer/>}/>
                         <Route path='*' element={() => <div>404 NOT FOUND</div>}/>
+                        <Route path='/profile/:userId' element={<ProfileContainer />} />
                     </Routes>
                 </Suspense>
 
@@ -104,7 +105,7 @@ let AppContainer = compose(
 (App)
 
 const MainSocialApp = () => {
-    return <BrowserRouter>
+    return <BrowserRouter >
         <Provider store={store}>
             <AppContainer/>
         </Provider>

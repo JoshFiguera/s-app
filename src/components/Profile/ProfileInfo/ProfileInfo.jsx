@@ -74,17 +74,17 @@ const ProfileData = ({profile, isOwner, goToEditMode}) => {
             <div>
                 <b>About me</b>: {profile.aboutMe}
             </div>
-            <div>
+            {/*<div>
                 <b>Contacts</b>: {Object.keys(profile.contacts).map(key => {
                 return <Contact key={key} contactTitle={key} contactValue={profile.contacts[key]}/>
             })}
-            </div>
+            </div>*/}
         </div>
     )
 }
 
-const Contact = ({contactTitle, contactValue}) => {
+/*const Contact = ({contactTitle, contactValue}) => {
     return <div className={s.contact}><b>{contactTitle}</b> : {contactValue}</div>
-}
+}*/
 
 export default ProfileInfo;

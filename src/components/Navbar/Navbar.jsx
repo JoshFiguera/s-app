@@ -14,20 +14,15 @@ const Navbar = () => {
         <div>
             <NavLink to="/messages" className={navData => navData.isActive ? s.active : s.item}>Messages</NavLink>
         </div>
-        <div>
+        {/*<div>
             <NavLink to="/news" className={navData => navData.isActive ? s.active : s.item}>News</NavLink>
         </div>
         <div>
             <NavLink to="/music" className={navData => navData.isActive ? s.active : s.item}>Music</NavLink>
-            <div>
-                <NavLink to="/settings" className={navData => navData.isActive ? s.active : s.item}>Settings</NavLink>
-            </div>
-
-
-
         </div>
-
-    </nav>
+        <div>
+            <NavLink to="/settings" className={navData => navData.isActive ? s.active : s.item}>Settings</NavLink>
+        </div>*/}    </nav>
 }
 
 export default Navbar;

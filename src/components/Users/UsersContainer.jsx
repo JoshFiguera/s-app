@@ -14,6 +14,8 @@ import {
     getTotalUsersCount,
     getUsers
 } from "../../redux/users-selectors";
+import {Navigate} from "react-router-dom";
+import {withAuthRedirect} from "../../hoc/withAuthRedirect";
 
 
 
@@ -32,6 +34,8 @@ class UsersContainer extends React.Component {
     }
 
     render() {
+
+        if (this.props.isAuth === false) return <Navigate to={'/login'}/>
         return <>
             {this.props.isFetching ? <Preloader/> : null}
             <Users totalUsersCount={this.props.totalUsersCount}
@@ -63,6 +67,7 @@ let mapStateToProps = (state) => {
 
 
 export default compose(
+    withAuthRedirect,
     (connect( mapStateToProps , {
                 follow, unfollow, setCurrentPage, toggleFollowingProgress,
                 getUsers: requestUsers
